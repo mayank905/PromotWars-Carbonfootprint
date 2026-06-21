@@ -1,0 +1,37 @@
+{
+  "food": {
+    "beef_meal": 6.61,
+    "lamb_meal": 5.84,
+    "cheese_meal": 2.79,
+    "pork_meal": 1.72,
+    "chicken_meal": 1.26,
+    "fish_meal": 1.16,
+    "eggs_meal": 0.98,
+    "vegetarian_meal": 0.51,
+    "vegan_meal": 0.37
+  },
+  "transport": {
+    "domestic_flight": 0.255,
+    "car_petrol": 0.192,
+    "car_diesel": 0.171,
+    "car_hybrid": 0.120,
+    "motorcycle": 0.103,
+    "bus": 0.089,
+    "train": 0.041,
+    "electric_car": 0.053,
+    "bicycle_walk": 0.000
+  },
+  "energy": {
+    "coal": 0.91,
+    "natural_gas": 0.42,
+    "grid_average": 0.48,
+    "solar_wind": 0.03
+  },
+  "lifestyle": {
+    "new_smartphone": 70,
+    "new_laptop": 350,
+    "new_jeans": 33,
+    "new_tshirt": 7,
+    "streaming_1hr": 0.036
+  }
+}
