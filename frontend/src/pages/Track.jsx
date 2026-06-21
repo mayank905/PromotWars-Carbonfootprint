@@ -49,8 +49,9 @@ export default function Track() {
       <div className="glass-card p-6">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium mb-2">Category</label>
+            <label htmlFor="category-select" className="block text-sm font-medium mb-2">Category</label>
             <select 
+              id="category-select"
               value={category} 
               onChange={(e) => {
                 setCategory(e.target.value);
@@ -65,8 +66,9 @@ export default function Track() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2">Activity</label>
+            <label htmlFor="activity-select" className="block text-sm font-medium mb-2">Activity</label>
             <select 
+              id="activity-select"
               value={activity} 
               onChange={(e) => setActivity(e.target.value)}
               className="w-full bg-forest-dark/50 border border-white/20 rounded-lg p-3 text-white outline-none focus:border-emerald"
@@ -78,8 +80,9 @@ export default function Track() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2">Amount</label>
+            <label htmlFor="amount-input" className="block text-sm font-medium mb-2">Amount</label>
             <input 
+              id="amount-input"
               type="number" 
               step="0.1"
               min="0.1"
@@ -92,6 +95,7 @@ export default function Track() {
           <button 
             type="submit" 
             disabled={loading}
+            aria-busy={loading}
             className="w-full py-3 bg-emerald text-forest-dark font-bold rounded-lg hover:bg-sage transition-colors disabled:opacity-50"
           >
             {loading ? 'Logging...' : 'Log Activity'}
@@ -102,6 +106,7 @@ export default function Track() {
           <motion.div 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
+            aria-live="polite"
             className={`mt-6 p-4 rounded-lg border ${feedback.type === 'success' ? 'bg-emerald/20 border-emerald/50' : 'bg-coral/20 border-coral/50'}`}
           >
             {feedback.msg}
